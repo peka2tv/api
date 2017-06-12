@@ -1,7 +1,7 @@
 # [Peka2.tv](http://peka2.tv) API
 
 ## Текущая версия
-### 0.2.0
+### 0.X.X
 ### [История изменений](CHANGELOG.md)
 
 
@@ -23,26 +23,20 @@ Token: Bearer your-token-here
 ```
 
 Для описания параметров используется формат TypeScript интерфейсов и типов.  
-Параметры отмеченные `?` являются необязательными.  
+Параметры отмеченные `?` являются необязательными. Если параметр является объектом и указан без `?` но его ключи указаны как необязательные, то подразумевается что нужно передать хотя бы один из них внутри объекта.  
 Где написано ``объект из ответа ...``, если не указано иного, подразумевает ответ указанного запроса без необязательных параметров/опций.
 
-Версия API передается через `Accept`. Например,
-```
-POST /user/current HTTP/1.1
-Accept: application/json; version=1.0
-```
-*В данный момент передавать версию не обязательно*
 
-Запросы передаются на сайт [`http://funstream.tv`](http://funstream.tv) для общего API и на [`wss://chat.funstream.tv`](wss://chat.funstream.tv) для чата.
+Запросы передаются на сайт [`http://peka2.tv`](http://peka2.tv) для общего API и на [`wss://chat.peka2.tv`](wss://chat.peka2.tv) для чата.
 
 Примеры запросов на `curl`
 ```sh
-curl -H "Content-Type: application/json" -H "Accept: application/json; version 1.0" -X POST http://funstream.tv/api/user/current
-curl -H "Content-Type: application/json" -H "Accept: application/json; version 1.0" -H "Token: Bearer ..." -X POST -d '{content: "stream"}' http://funstream.tv/api/subscribe/subscribers
+curl -H "Content-Type: application/json" -H "Accept: application/json; version 1.0" -X POST http://peka2.tv/api/user/current
+curl -H "Content-Type: application/json" -H "Accept: application/json; version 1.0" -H "Token: Bearer ..." -X POST -d '{content: "stream"}' http://peka2.tv/api/subscribe/subscribers
 ```
 
 
-##### В случае вопросов, ошибок или неточностей документации, пишите в Помощь на сайте [funstream.tv](http://funstream.tv/stream/all/top) (необходимо залогиниться, категория 'Технические вопросы') или в Мейн чат на сайте [peka2.tv](http://peka2.tv) пользователю `drow`.
+##### В случае вопросов, ошибок или неточностей документации, пишите в Помощь на сайте [funstream.tv](http://peka2.tv/stream/all/top) (необходимо залогиниться, категория 'Технические вопросы') или в Мейн чат на сайте [peka2.tv](http://peka2.tv) пользователю `drow`.
 
 
 # API
@@ -56,8 +50,6 @@ curl -H "Content-Type: application/json" -H "Accept: application/json; version 1
 - **`Sm`** Администратор смайлов, роль `smiler`
 - **`MS`** Стример с партнёркой, роль `masterstreamer`
 - **`RA`** Администратор ролей, роль `roleAdmin`
-- **`Sc`** Изменение расписания, роль `schedule`
-- **`Se`** Управление сезонами соревнования, роль `seasoner`
 - **`StA`** Администратор магазина, роль `storeAdmin`
 - **`StS`** Поддержка магазина, роль `storeSupport`
 - **`C`** Закрытый, для внутреннего использования
@@ -201,7 +193,6 @@ curl -H "Content-Type: application/json" -H "Accept: application/json; version 1
         - [**Сторонние сервисы в чате**](notification.md#Сторонние-сервисы-в-чате)
             - [`chatThirdpartySendMessageError` Ошибка отправки сообщения в чат сервис](notification.md#Ошибка-отправки-сообщения-в-чат-сервис)
 - [**Сторонние сервисы**](thirdparty.md)
-    - [`POST` `A` `/api/oauth/thirdparty/goodgame` Сохранение данных авторизации для GoodGame](thirdparty.md#Сохранение-данных-авторизации-для-goodgame)
     - [`POST` `C` `/api/oauth/thirdparty/register` Регистрация через сторонние сервисы](thirdparty.md#Регистрация-через-сторонние-сервисы)
     - [**Уведомления**](thirdparty.md#Уведомления-1)
         - [`thirdpartyLogin` Логин через сторонние сервисы](thirdparty.md#Логин-через-сторонние-сервисы)

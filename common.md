@@ -42,12 +42,13 @@
 ## Пользователь
 
 #### Данные пользователя
-##### [`POST` `P` `/api/user`](http://funstream.tv/api/user)
+##### [`POST` `P` `/api/user`](http://peka2.tv/api/user)
 **запрос**
 ```ts
 {
     id?: number; // Идентификатор пользователя
     name?: string; // Имя пользователя
+    slug?: string; // Короткое имя для формирования ссылок
 }
 ```
 **ответ**
@@ -63,7 +64,7 @@
 
 
 #### Данные списка пользователей
-##### [`POST` `P` `/api/user/list`](http://funstream.tv/api/user/list)
+##### [`POST` `P` `/api/user/list`](http://peka2.tv/api/user/list)
 **запрос**
 ```ts
 {
@@ -85,7 +86,7 @@
 
 
 #### Данные текущего пользователя
-##### [`POST` `P` `/api/user/current`](http://funstream.tv/api/user/current)
+##### [`POST` `P` `/api/user/current`](http://peka2.tv/api/user/current)
 **запрос**
 ```ts
 {}
@@ -106,6 +107,7 @@
     name: string; // Имя пользователя
     slug: string; // Короткое имя для формирования ссылок (например на канал стрима)
     block: boolean; // Статус блокировки, false по умолчанию
+    streamer: boolean; // Флаг того что юзер считается стримером (имеет созданный стрим канал)
     settings: Object; // Настройки пользователя, объект из ответа /api/user/settings
     roles: { // Роли пользователя
         support: boolean; // Сапорт, false по умолчанию
@@ -128,7 +130,7 @@
 
 
 #### Полные данные пользователя
-##### [`POST` `RA` `/api/user/full`](http://funstream.tv/api/user/full)
+##### [`POST` `RA` `/api/user/full`](http://peka2.tv/api/user/full)
 **запрос**
 ```ts
 {
@@ -153,7 +155,7 @@
 
 
 #### Логин
-##### [`POST` `C` `/api/user/login`](https://funstream.tv/api/user/login)
+##### [`POST` `C` `/api/user/login`](https://peka2.tv/api/user/login)
 **запрос**
 ```ts
 {
@@ -170,13 +172,13 @@
 }
 ```
 *[`/api/user/current`](#Данные-текущего-пользователя)*  
-*Работает только на funstream.tv из-за использования Рекапчи, использует HTTPS протокол.*  
-*При успешном логине высталяется http-only кука, необходимая для прелоада funstream.tv.*  
+*Работает только на peka2.tv из-за использования Рекапчи, использует HTTPS протокол.*  
+*При успешном логине высталяется http-only кука, необходимая для прелоада peka2.tv.*  
 *Вернёт ошибку если пользователь с таким именем и паролем не найден или капча не верна.*
 
 
 #### Логин по токену
-##### [`POST` `P` `/api/user/login/bytoken`](https://funstream.tv/api/user/login/bytoken)
+##### [`POST` `P` `/api/user/login/bytoken`](https://peka2.tv/api/user/login/bytoken)
 **запрос**
 ```ts
 {
@@ -191,12 +193,11 @@
 ```
 *[`/api/user/current`](#Данные-текущего-пользователя)*  
 *Работает только с токеном, полученным при логине через сайт. OAuth токен даст ошибку.*  
-*При успешном логине высталяется http-only кука, необходимая для прелоада funstream.tv.*  
 *Вернёт ошибку если токен неверен.*
 
 
 #### Логаут
-##### [`POST` `A` `/api/user/logout`](http://funstream.tv/api/user/logout)
+##### [`POST` `A` `/api/user/logout`](http://peka2.tv/api/user/logout)
 **запрос**
 ```ts
 {}
@@ -210,7 +211,7 @@
 
 
 #### Получить или установить настройки текущего пользователя
-##### [`POST` `A` `/api/user/settings`](http://funstream.tv/api/user/settings)
+##### [`POST` `A` `/api/user/settings`](http://peka2.tv/api/user/settings)
 **запрос и ответ идентичны**
 ```ts
 {
@@ -247,7 +248,7 @@
 
 
 #### Запрос на сброс пароля
-##### [`POST` `P` `/api/user/forgot`](http://funstream.tv/api/user/forgot)
+##### [`POST` `P` `/api/user/forgot`](http://peka2.tv/api/user/forgot)
 **запрос**
 ```ts
 {
@@ -262,7 +263,7 @@
 
 
 #### Установка пароля
-##### [`POST` `P` `/api/user/restore`](http://funstream.tv/api/user/restore)
+##### [`POST` `P` `/api/user/restore`](http://peka2.tv/api/user/restore)
 **запрос**
 ```ts
 {
@@ -280,7 +281,7 @@
 
 
 #### Список пользователей с ролью
-##### [`POST` `RA` `/api/user/roles/list`](http://funstream.tv/api/user/roles/list)
+##### [`POST` `RA` `/api/user/roles/list`](http://peka2.tv/api/user/roles/list)
 **запрос**
 ```ts
 {
@@ -299,7 +300,7 @@
 
 
 #### Изменить роль пользователя
-##### [`POST` `RA` `/api/user/roles/set`](http://funstream.tv/api/user/roles/set)
+##### [`POST` `RA` `/api/user/roles/set`](http://peka2.tv/api/user/roles/set)
 **запрос**
 ```ts
 {
@@ -318,7 +319,7 @@
 ## Категория
 
 #### Категория контента
-##### [`POST` `P` `/api/category`](http://funstream.tv/api/category)
+##### [`POST` `P` `/api/category`](http://peka2.tv/api/category)
 **запрос**
 ```ts
 {
@@ -348,7 +349,7 @@
 ## Стрим
 
 #### Данные стрима
-##### [`POST` `P` `/api/stream`](http://funstream.tv/api/stream)
+##### [`POST` `P` `/api/stream`](http://peka2.tv/api/stream)
 **запрос**
 ```ts
 {
@@ -400,7 +401,7 @@
 ## Чат
 
 #### Данные каналов
-##### [`POST` `P` `/api/channel/data`](http://funstream.tv/api/channel/data)
+##### [`POST` `P` `/api/channel/data`](http://peka2.tv/api/channel/data)
 **запрос**
 ```ts
 {
@@ -425,7 +426,7 @@
 
 
 #### Список приват каналов
-##### [`POST` `A` `/api/channel/private`](http://funstream.tv/api/channel/private)
+##### [`POST` `A` `/api/channel/private`](http://peka2.tv/api/channel/private)
 **запрос**
 ```ts
 {}
@@ -446,7 +447,7 @@
 ## Фильтр
 
 #### Список элементов контента
-##### [`POST` `A/P` `/api/content`](http://funstream.tv/api/content)
+##### [`POST` `A/P` `/api/content`](http://peka2.tv/api/content)
 **запрос**
 ```ts
 {
@@ -480,7 +481,7 @@
 
 
 #### Топ N элементов контента
-##### [`POST` `P` `/api/content/top`](http://funstream.tv/api/content/top)
+##### [`POST` `P` `/api/content/top`](http://peka2.tv/api/content/top)
 **запрос**
 ```ts
 {
@@ -537,7 +538,7 @@
 ## Подписки
 
 #### Подписаться
-##### [`POST` `A` `/api/subscribe/add`](http://funstream.tv/api/subscribe/add)
+##### [`POST` `A` `/api/subscribe/add`](http://peka2.tv/api/subscribe/add)
 **запрос**
 ```ts
 {
@@ -553,7 +554,7 @@
 
 
 #### Количество активных подписок
-##### [`POST` `A` `/api/subscribe/amount`](http://funstream.tv/api/subscribe/amount)
+##### [`POST` `A` `/api/subscribe/amount`](http://peka2.tv/api/subscribe/amount)
 **запрос**
 ```ts
 {
@@ -571,7 +572,7 @@
 
 
 #### Проверить подписку
-##### [`POST` `A` `/api/subscribe/check`](http://funstream.tv/api/subscribe/check)
+##### [`POST` `A` `/api/subscribe/check`](http://peka2.tv/api/subscribe/check)
 **запрос**
 ```ts
 {
@@ -589,7 +590,7 @@
 
 
 #### Список подписок
-##### [`POST` `A` `/api/subscribe/list`](http://funstream.tv/api/subscribe/list)
+##### [`POST` `A` `/api/subscribe/list`](http://peka2.tv/api/subscribe/list)
 **запрос**
 ```ts
 {
@@ -606,7 +607,7 @@
 
 
 #### Отписаться
-##### [`POST` `A` `/api/subscribe/remove`](http://funstream.tv/api/subscribe/remove)
+##### [`POST` `A` `/api/subscribe/remove`](http://peka2.tv/api/subscribe/remove)
 **запрос**
 ```ts
 {
@@ -622,7 +623,7 @@
 
 
 #### Список подписчиков пользователя
-##### [`POST` `A` `/api/subscribe/subscribers`](http://funstream.tv/api/subscribe/subscribers)
+##### [`POST` `A` `/api/subscribe/subscribers`](http://peka2.tv/api/subscribe/subscribers)
 **запрос**
 ```ts
 {
@@ -644,7 +645,7 @@
 ## Игноры
 
 #### Добавить в список игнорируемых
-##### [`POST` `A` `/api/ignore/add`](http://funstream.tv/api/ignore/add)
+##### [`POST` `A` `/api/ignore/add`](http://peka2.tv/api/ignore/add)
 **запрос**
 ```ts
 {
@@ -660,7 +661,7 @@
 
 
 #### Проверить на игнор
-##### [`POST` `A` `/api/ignore/check`](http://funstream.tv/api/ignore/check)
+##### [`POST` `A` `/api/ignore/check`](http://peka2.tv/api/ignore/check)
 **запрос**
 ```ts
 {
@@ -678,7 +679,7 @@
 
 
 #### Список игнорируемого
-##### [`POST` `A` `/api/ignore/list`](http://funstream.tv/api/ignore/list)
+##### [`POST` `A` `/api/ignore/list`](http://peka2.tv/api/ignore/list)
 **запрос**
 ```ts
 {
@@ -699,7 +700,7 @@
 
 
 #### Удалить из списка игнорируемого
-##### [`POST` `A` `/api/ignore/remove`](http://funstream.tv/api/ignore/remove)
+##### [`POST` `A` `/api/ignore/remove`](http://peka2.tv/api/ignore/remove)
 **запрос**
 ```ts
 {
@@ -717,7 +718,7 @@
 ## Дополнительные вызовы
 
 #### Пакетный запрос
-##### [`POST` `P` `/api/bulk`](http://funstream.tv/api/bulk)
+##### [`POST` `P` `/api/bulk`](http://peka2.tv/api/bulk)
 **запрос**
 ```ts
 {
