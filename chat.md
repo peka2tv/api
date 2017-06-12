@@ -20,7 +20,7 @@
 Протокол взаимодействия
 ---------------------
 
-Клиент и сервер обмениваются событиями через websocket библиотеку [`socket.io`](http://socket.io/). Адрес подключения - [`wss://chat.funstream.tv`](wss://chat.funstream.tv) (в зависимости от используемой библиотеки может понадобится указать боле полный вариант - [`wss://chat.funstream.tv/?EIO=3&transport=websocket`](wss://chat.funstream.tv/?EIO=3&transport=websocket), так же доступно подключение по ws:// протоколу). Поддерживается только 13 версия протокола websocket.
+Клиент и сервер обмениваются событиями через websocket библиотеку [`socket.io`](http://socket.io/). Адрес подключения - [`wss://chat.peka2.tv`](wss://chat.peka2.tv) (в зависимости от используемой библиотеки может понадобится указать боле полный вариант - [`wss://chat.peka2.tv/?EIO=3&transport=websocket`](wss://chat.peka2.tv/?EIO=3&transport=websocket), так же доступно подключение по ws:// протоколу). Поддерживается только 13 версия протокола websocket.
 При соединении значении опции `transports` может быть только 'websocket'. Все события для сервера получают ответ через коллбек.
 
 [Примеры взаимодействия для разных языков](chat-client-examples.md)

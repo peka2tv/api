@@ -20,7 +20,7 @@ API Смайлов
 ## Смайлы
 
 #### Доступные смайлы
-##### [`POST` `P` `/api/smile`](http://funstream.tv/api/smile)
+##### [`POST` `P` `/api/smile`](http://peka2.tv/api/smile)
 **запрос**
 ```ts
 {}
@@ -52,7 +52,7 @@ API Смайлов
 
 
 #### Добавить смайл
-##### [`POST` `MS/Sm` `/api/smile/add`](http://funstream.tv/api/smile/add)
+##### [`POST` `MS/Sm` `/api/smile/add`](http://peka2.tv/api/smile/add)
 **запрос**
 ```ts
 {}
@@ -70,7 +70,7 @@ API Смайлов
 
 
 #### Утвердить изменения в смайлах стримера
-##### [`POST` `P` `/api/smile/approve`](http://funstream.tv/api/smile/approve)
+##### [`POST` `P` `/api/smile/approve`](http://peka2.tv/api/smile/approve)
 **запрос**
 ```ts
 {
@@ -86,7 +86,7 @@ API Смайлов
 
 
 #### Список изменений в смайлах стримеров на утверждение
-##### [`POST` `Sm` `/api/smile/pending`](http://funstream.tv/api/smile/pending)
+##### [`POST` `Sm` `/api/smile/pending`](http://peka2.tv/api/smile/pending)
 **запрос**
 ```ts
 {}
@@ -104,7 +104,7 @@ API Смайлов
 
 
 #### Отклонить изменения в смайлах стримера
-##### [`POST` `Sm` `/api/smile/reject`](http://funstream.tv/api/smile/reject)
+##### [`POST` `Sm` `/api/smile/reject`](http://peka2.tv/api/smile/reject)
 **запрос**
 ```ts
 {
@@ -120,7 +120,7 @@ API Смайлов
 
 
 #### Удалить смайлы
-##### [`POST` `MS/Sm` `/api/smile/remove`](http://funstream.tv/api/smile/remove)
+##### [`POST` `MS/Sm` `/api/smile/remove`](http://peka2.tv/api/smile/remove)
 **запрос**
 ```ts
 [
@@ -138,7 +138,7 @@ API Смайлов
 
 
 #### Обновить смайлы
-##### [`POST` `MS/Sm` `/api/smile/update`](http://funstream.tv/api/smile/update)
+##### [`POST` `MS/Sm` `/api/smile/update`](http://peka2.tv/api/smile/update)
 **запрос**
 ```ts
 [
@@ -161,7 +161,7 @@ API Смайлов
 
 
 #### Наличие смайлов в ожидании утверждения
-##### [`POST` `MS` `/api/smile/ms/pending`](http://funstream.tv/api/smile/ms/pending)
+##### [`POST` `MS` `/api/smile/ms/pending`](http://peka2.tv/api/smile/ms/pending)
 **запрос**
 ```ts
 {}
@@ -176,7 +176,7 @@ API Смайлов
 
 
 #### Отправить текущие изменения в смайлах на утверждение
-##### [`POST` `MS` `/api/smile/ms/prepare`](http://funstream.tv/api/smile/ms/prepare)
+##### [`POST` `MS` `/api/smile/ms/prepare`](http://peka2.tv/api/smile/ms/prepare)
 **запрос**
 ```ts
 {}
@@ -189,7 +189,7 @@ API Смайлов
 
 
 #### Откатить изменения в смайлах
-##### [`POST` `MS` `/api/smile/ms/revert`](http://funstream.tv/api/smile/ms/revert)
+##### [`POST` `MS` `/api/smile/ms/revert`](http://peka2.tv/api/smile/ms/revert)
 **запрос**
 ```ts
 {}
@@ -207,7 +207,7 @@ API Смайлов
 Работа с иконками аналогична смайлам и запросы ниже являются заглушками к соответствующим запросам смайлов.
 
 #### Добавление иконки
-##### [`POST` `Ms` `/api/icon/add`](http://funstream.tv/api/icon/add)
+##### [`POST` `Ms` `/api/icon/add`](http://peka2.tv/api/icon/add)
 **запрос**
 ```ts
 {}
@@ -222,7 +222,7 @@ API Смайлов
 
 
 #### Список иконок
-##### [`POST` `P` `/api/icon/list`](http://funstream.tv/api/icon/list)
+##### [`POST` `P` `/api/icon/list`](http://peka2.tv/api/icon/list)
 **запрос**
 ```ts
 {}
@@ -239,7 +239,7 @@ API Смайлов
 
 
 #### Удаление иконок
-##### [`POST` `Ms` `/api/icon/remove`](http://funstream.tv/api/icon/remove)
+##### [`POST` `Ms` `/api/icon/remove`](http://peka2.tv/api/icon/remove)
 **запрос**
 ```ts
 [

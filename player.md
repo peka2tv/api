@@ -4,7 +4,7 @@ API ск2тв плеера
 
 
 #### Онлайн статус трансляций
-##### [`GET` `P` `/api/player/live`](http://funstream.tv/api/player/live)
+##### [`GET` `P` `/api/player/live`](http://peka2.tv/api/player/live)
 **запрос**
 ```ts
 {

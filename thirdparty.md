@@ -13,7 +13,7 @@ API взаимодействия со сторонними сервисами
 
 
 #### Регистрация через сторонние сервисы
-##### [`POST` `C` `/api/oauth/thirdparty/register`](http://funstream.tv/api/oauth/thirdparty/register)
+##### [`POST` `C` `/api/oauth/thirdparty/register`](http://peka2.tv/api/oauth/thirdparty/register)
 **запрос**
 ```ts
 {
@@ -28,7 +28,7 @@ API взаимодействия со сторонними сервисами
     current: Object; // Данные пользователя, объект из ответа /api/user/current
 }
 ```
-*Работает только на funstream.tv.*  
+*Работает только на peka2.tv.*  
 *Позволяет регистрироваться через Twitch/VK/Google.*  
 *Вернёт ошибку если токен авторизации не верен, пользователь с таким именем уже существует или имя пользователя недопустимо.*
 

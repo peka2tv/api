@@ -26,7 +26,7 @@
 ## Модерация
 
 #### Забанить пользователя
-##### [`POST` `A` `/api/moderation/accuse`](http://funstream.tv/api/moderation/accuse)
+##### [`POST` `A` `/api/moderation/accuse`](http://peka2.tv/api/moderation/accuse)
 **запрос**
 ```ts
 {
@@ -43,7 +43,7 @@
 
 
 #### Блокировка пользователя
-##### [`POST` `B` `/api/moderation/block`](http://funstream.tv/api/moderation/block)
+##### [`POST` `B` `/api/moderation/block`](http://peka2.tv/api/moderation/block)
 **запрос**
 ```ts
 {
@@ -60,7 +60,7 @@
 
 
 ####  Проверить забанен ли пользователь
-##### [`POST` `P` `/api/moderation/check`](http://funstream.tv/api/moderation/check)
+##### [`POST` `P` `/api/moderation/check`](http://peka2.tv/api/moderation/check)
 **запрос**
 ```ts
 {
@@ -81,7 +81,7 @@
 
 
 #### Получить список банов
-##### [`POST` `A` `/api/moderation/list`](http://funstream.tv/api/moderation/list)
+##### [`POST` `A` `/api/moderation/list`](http://peka2.tv/api/moderation/list)
 **запрос**
 ```ts
 {
@@ -119,7 +119,7 @@
 
 
 #### Получить список причин бана
-##### [`POST` `P` `/api/moderation/reasons`](http://funstream.tv/api/moderation/reasons)
+##### [`POST` `P` `/api/moderation/reasons`](http://peka2.tv/api/moderation/reasons)
 **запрос**
 ```ts
 {
@@ -141,7 +141,7 @@
 
 
 #### Отменить бан
-##### [`POST` `M` `/api/moderation/undo`](http://funstream.tv/api/moderation/undo)
+##### [`POST` `M` `/api/moderation/undo`](http://peka2.tv/api/moderation/undo)
 **запрос**
 ```ts
 {
@@ -166,7 +166,7 @@
 
 
 #### Задать вопрос
-##### [`POST` `A` `/api/support/ask`](http://funstream.tv/api/support/ask)
+##### [`POST` `A` `/api/support/ask`](http://peka2.tv/api/support/ask)
 **запрос**
 ```ts
 {
@@ -190,7 +190,7 @@
 
 
 #### Отключить возможность задавать вопросы
-##### [`POST` `A` `/api/support/ban`](http://funstream.tv/api/support/ban)
+##### [`POST` `A` `/api/support/ban`](http://peka2.tv/api/support/ban)
 **запрос**
 ```ts
 {
@@ -207,7 +207,7 @@
 
 
 #### Список последних вопросов
-##### [`POST` `A` `/api/support/channels`](http://funstream.tv/api/support/channels)
+##### [`POST` `A` `/api/support/channels`](http://peka2.tv/api/support/channels)
 **запрос**
 ```ts
 {}
@@ -225,7 +225,7 @@
 
 
 #### Получить список вопросов
-##### [`POST` `S` `/api/support/list`](http://funstream.tv/api/support/list)
+##### [`POST` `S` `/api/support/list`](http://peka2.tv/api/support/list)
 **запрос**
 ```ts
 {
@@ -250,7 +250,7 @@
 ## Безопасность
 
 #### Список последних логинов
-##### [`POST` `A` `/api/security/user`](http://funstream.tv/api/security/user)
+##### [`POST` `A` `/api/security/user`](http://peka2.tv/api/security/user)
 **запрос**
 ```ts
 {}

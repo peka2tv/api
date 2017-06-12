@@ -14,7 +14,7 @@
 
 <script type='text/javascript'>
 
-    var socket = io('wss://chat.funstream.tv', {
+    var socket = io('wss://chat.peka2.tv', {
         transports: ['websocket'],
         path: '/',
         reconnection: true,
@@ -66,7 +66,7 @@
 ```ts
 var io = require('socket.io-client');
 
-var socket = io.connect('wss://chat.funstream.tv', {
+var socket = io.connect('wss://chat.peka2.tv', {
     transports: ['websocket']
 });
 
@@ -93,7 +93,7 @@ socket.emit('/chat/join', {channel: 'main'}, function(data) {
 ##### C\#
 
 ```c#
-socket = IO.Socket("wss://chat.funstream.tv", new IO.Options { Transports = ImmutableList.Create("websocket") });
+socket = IO.Socket("wss://chat.peka2.tv", new IO.Options { Transports = ImmutableList.Create("websocket") });
 
 socket.On(Socket.EVENT_CONNECT, (a) =>
 {

@@ -81,7 +81,7 @@ config: {
 
 
 #### Создание/изменение бонуса
-##### [`POST` `StA` `/api/store/bonus/modify`](http://funstream.tv/api/store/bonus/modify)
+##### [`POST` `StA` `/api/store/bonus/modify`](http://peka2.tv/api/store/bonus/modify)
 **запрос**
 ```ts
 {
@@ -125,7 +125,7 @@ config: {
 
 
 #### Список бонусов
-##### [`POST` `StA` `/api/store/bonus/list`](http://funstream.tv/api/store/bonus/list)
+##### [`POST` `StA` `/api/store/bonus/list`](http://peka2.tv/api/store/bonus/list)
 **запрос**
 ```ts
 {}
@@ -144,7 +144,7 @@ config: {
 ## Бонусы пользователя
 
 #### Список бонусов пользователя
-##### [`POST` `StS` `/api/store/purchase/list`](http://funstream.tv/api/store/purchase/list)
+##### [`POST` `StS` `/api/store/purchase/list`](http://peka2.tv/api/store/purchase/list)
 **запрос**
 ```ts
 {
@@ -167,7 +167,7 @@ config: {
 
 
 #### Список бонусов текущего пользователя
-##### [`POST` `A` `/api/store/purchase/my`](http://funstream.tv/api/store/purchase/my)
+##### [`POST` `A` `/api/store/purchase/my`](http://peka2.tv/api/store/purchase/my)
 **запрос**
 ```ts
 {}
@@ -183,7 +183,7 @@ config: {
 
 
 #### Удалить бонус пользователя
-##### [`POST` `StS` `/api/store/purchase/remove`](http://funstream.tv/api/store/purchase/remove)
+##### [`POST` `StS` `/api/store/purchase/remove`](http://peka2.tv/api/store/purchase/remove)
 **запрос**
 ```ts
 {
@@ -197,7 +197,7 @@ config: {
 
 
 #### Изменение данных бонуса пользователя
-##### [`POST` `StS` `/api/store/purchase/modify`](http://funstream.tv/api/store/purchase/modify)
+##### [`POST` `StS` `/api/store/purchase/modify`](http://peka2.tv/api/store/purchase/modify)
 **запрос**
 ```ts
 {
@@ -214,7 +214,7 @@ config: {
 
 
 #### Изменение статуса бонуса пользователя
-##### [`POST` `A/StS` `/api/store/purchase/setStatus`](http://funstream.tv/api/store/purchase/setStatus)
+##### [`POST` `A/StS` `/api/store/purchase/setStatus`](http://peka2.tv/api/store/purchase/setStatus)
 **запрос**
 ```ts
 {
@@ -235,7 +235,7 @@ config: {
 ## Покупка бонуса
 
 #### Покупка бонуса за пекоины
-##### [`POST` `A` `/api/store/buy/pekoins`](http://funstream.tv/api/store/buy/pekoins)
+##### [`POST` `A` `/api/store/buy/pekoins`](http://peka2.tv/api/store/buy/pekoins)
 **запрос**
 ```ts
 {
@@ -253,7 +253,7 @@ config: {
 
 
 #### Покупка бонуса за баллы
-##### [`POST` `A` `/api/store/buy/points`](http://funstream.tv/api/store/buy/points)
+##### [`POST` `A` `/api/store/buy/points`](http://peka2.tv/api/store/buy/points)
 **запрос**
 ```ts
 {
@@ -274,7 +274,7 @@ config: {
 ## Баллы
 
 #### Баллы пользователя
-##### [`POST` `StS` `/api/store/points/get`](http://funstream.tv/api/store/points/get)
+##### [`POST` `StS` `/api/store/points/get`](http://peka2.tv/api/store/points/get)
 **запрос**
 ```ts
 {
@@ -291,7 +291,7 @@ config: {
 
 
 #### Баллы текущего пользователя
-##### [`POST` `A` `/api/store/points/my`](http://funstream.tv/api/store/points/my)
+##### [`POST` `A` `/api/store/points/my`](http://peka2.tv/api/store/points/my)
 **запрос**
 ```ts
 {}
@@ -306,7 +306,7 @@ config: {
 
 
 #### Изменить баллы пользователя
-##### [`POST` `StS` `/api/store/points/set`](http://funstream.tv/api/store/points/set)
+##### [`POST` `StS` `/api/store/points/set`](http://peka2.tv/api/store/points/set)
 **запрос**
 ```ts
 {
@@ -327,7 +327,7 @@ config: {
 ## Подписки на стримеров
 
 #### Купить подписку на стримера
-##### [`POST` `A` `/api/store/subscription/purchase`](http://funstream.tv/api/store/subscription/purchase)
+##### [`POST` `A` `/api/store/subscription/purchase`](http://peka2.tv/api/store/subscription/purchase)
 **запрос**
 ```ts
 {
@@ -342,7 +342,7 @@ config: {
 
 
 #### Список подписок пользователя
-##### [`POST` `StS` `/api/store/subscription/list`](http://funstream.tv/api/store/subscription/list)
+##### [`POST` `StS` `/api/store/subscription/list`](http://peka2.tv/api/store/subscription/list)
 **запрос**
 ```ts
 {
@@ -360,7 +360,7 @@ config: {
 
 
 #### Список подписок текущего пользователя
-##### [`POST` `A` `/api/store/subscription/my`](http://funstream.tv/api/store/subscription/my)
+##### [`POST` `A` `/api/store/subscription/my`](http://peka2.tv/api/store/subscription/my)
 **запрос**
 ```ts
 {}
@@ -376,7 +376,7 @@ config: {
 
 
 #### Добавление/изменение подписки пользователя
-##### [`POST` `StS` `/api/store/subscription/modify`](http://funstream.tv/api/store/subscription/modify)
+##### [`POST` `StS` `/api/store/subscription/modify`](http://peka2.tv/api/store/subscription/modify)
 **запрос**
 ```ts
 {
@@ -400,7 +400,7 @@ config: {
 
 
 #### Удаление подписки пользователя
-##### [`POST` `StS` `/api/store/subscription/remove`](http://funstream.tv/api/store/subscription/remove)
+##### [`POST` `StS` `/api/store/subscription/remove`](http://peka2.tv/api/store/subscription/remove)
 **запрос**
 ```ts
 {
@@ -414,7 +414,7 @@ config: {
 
 
 #### Изменение статуса подписки
-##### [`POST` `A/StS` `/api/store/subscription/setStatus`](http://funstream.tv/api/store/subscription/setStatus)
+##### [`POST` `A/StS` `/api/store/subscription/setStatus`](http://peka2.tv/api/store/subscription/setStatus)
 **запрос**
 ```ts
 {

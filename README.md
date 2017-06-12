@@ -27,16 +27,16 @@ Token: Bearer your-token-here
 Где написано ``объект из ответа ...``, если не указано иного, подразумевает ответ указанного запроса без необязательных параметров/опций.
 
 
-Запросы передаются на сайт [`http://funstream.tv`](http://funstream.tv) для общего API и на [`wss://chat.funstream.tv`](wss://chat.funstream.tv) для чата.
+Запросы передаются на сайт [`http://peka2.tv`](http://peka2.tv) для общего API и на [`wss://chat.peka2.tv`](wss://chat.peka2.tv) для чата.
 
 Примеры запросов на `curl`
 ```sh
-curl -H "Content-Type: application/json" -H "Accept: application/json; version 1.0" -X POST http://funstream.tv/api/user/current
-curl -H "Content-Type: application/json" -H "Accept: application/json; version 1.0" -H "Token: Bearer ..." -X POST -d '{content: "stream"}' http://funstream.tv/api/subscribe/subscribers
+curl -H "Content-Type: application/json" -H "Accept: application/json; version 1.0" -X POST http://peka2.tv/api/user/current
+curl -H "Content-Type: application/json" -H "Accept: application/json; version 1.0" -H "Token: Bearer ..." -X POST -d '{content: "stream"}' http://peka2.tv/api/subscribe/subscribers
 ```
 
 
-##### В случае вопросов, ошибок или неточностей документации, пишите в Помощь на сайте [funstream.tv](http://funstream.tv/stream/all/top) (необходимо залогиниться, категория 'Технические вопросы') или в Мейн чат на сайте [peka2.tv](http://peka2.tv) пользователю `drow`.
+##### В случае вопросов, ошибок или неточностей документации, пишите в Помощь на сайте [funstream.tv](http://peka2.tv/stream/all/top) (необходимо залогиниться, категория 'Технические вопросы') или в Мейн чат на сайте [peka2.tv](http://peka2.tv) пользователю `drow`.
 
 
 # API

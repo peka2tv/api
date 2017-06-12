@@ -1,6 +1,8 @@
 # 0.3.X (2016-12-XX)
 
 #### BREAKING CHANGES
+- __*__
+    - адреса апи запросов изменениы с `funstream.tv` на `peka2.tv`
 - **admin**
     - [`/api/moderation/accuse`](admin.md#Забанить-пользователя) параметр запроса `userId` заменён на `messageId`
 - **chat**
